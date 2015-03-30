@@ -1,0 +1,20 @@
+# rpm -qa | grep xinetd
+# rpm -qa | grep telnet
+# /etc/init.d/xinetd restart
+# service xinetd restart
+# chkconfig xinetd on
+# vim /etc/xinetd.d/telnet
+"disable=yes" => "disable=no"
+# setup    // or system_config_firewall
+23:tcp , 23:udp
+
+# service nwetwork restart
+# service xinetd restart
+# chkconfig network on
+# chkconfig xinetd on
+#ifconfig
+
+
+
+link => https://www.youtube.com/watch?v=Lf5d21QhQQI
+
