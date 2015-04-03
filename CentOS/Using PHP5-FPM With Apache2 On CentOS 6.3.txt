@@ -379,6 +379,15 @@ By default PHP-FPM is listening on port 9000 on 127.0.0.1. It is also possible t
 ;listen = 127.0.0.1:9000
 listen = /tmp/php5-fpm.sock
 [...]
+;listen.owner = nobody
+;listen.group = nobody
+;listen.mode = 0660
+; AA 03/04/2015 tarihli degisiklik
+listen.owner = apache
+listen.group = apache
+listen.mode = 0660
+[...]
+
 Then reload PHP-FPM:
 -----
 # /etc/init.d/php-fpm reload
@@ -402,5 +411,18 @@ Finally reload Apache:
 
 -----
 # sudo chmod 666 /var/run/php5-fpm/php5-fpm.sock
+-----
+
+-----
+# yum install php-soap
+-----
+
+-----
+# sudo chmod 666 /var/run/php5-fpm/php5-fpm.sock  
+Yerine
+# vi /etc/rc.local
+Apache ile php5-fpm servisleri arasindaki iletisim icin (php bu dosyayi otomatik olarak root:root seklinde olusturuyor ve apahce dosyaya ulasamiyor)
+/bin/chown apache:apache /var/run/php5-fpm/php5-fpm.sock
+satýrý eklenecek. ama "listen.owner = apache" yaparsanýz gerek yok....
 -----
  

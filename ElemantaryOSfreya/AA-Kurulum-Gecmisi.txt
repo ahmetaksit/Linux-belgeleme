@@ -1,0 +1,316 @@
+﻿-----------------------------------------------------------------------------
+*****************************************************************************
+http://linuxscoop.com/video/20-things-to-do-after-installing-elementary-os-freya
+-----------------------------------------------------------------------------
+20 Things To Do After Installing Elementary OS Freya
+
+01 – Update your system
+
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get dist upgrade
+
+02 – Install additional drivers
+
+Software & Updates – Additional Drivers
+
+03 – Install Multimedia Codecs and Enable DVD Playback
+
+$ sudo apt-add-repository ppa:mc3man/trusty-media
+$ sudo apt-get update
+$ sudo apt-get install ubuntu-restricted-extras ffmpeg gstreamer0.10-plugins-ugly libavcodec-extra-54 libvdpau-va-gl1 libmad0 mpg321 gstreamer1.0-libav
+Enable DVD Playback
+
+$ sudo /usr/share/doc/libdvdread4/install-css.s­h
+
+04 – Install VLC Media Player
+
+$ sudo apt-get install vlc
+
+05 – Install Plugin Flash Player and Pepper Flash
+
+$ sudo apt-get install flashplugin-installer pepperflashplugin-nonfree
+
+06 – Install JAVA
+
+$ sudo add-apt-repository -y ppa:webupd8team/java
+$ sudo apt-get update
+$ sudo apt-get install oracle-java9-installer
+
+07 – Install Support for Archive Formats and Restricted Extras
+
+$ sudo apt-get install unace rar unrar p7zip-rar p7zip sharutils uudeview mpack arj cabextract lzip lunzip
+
+08 – Install LibreOffice Suites
+
+$ sudo apt-get install libreoffice libreoffice-gtk libreoffice-style-sifr
+
+09 – Install Additional Web Browser
+
+$ sudo apt-get install chromium-browser firefox
+
+10 – Install Torrent Client
+
+$ sudo apt-get install transmission
+
+11 – Install Download Manager
+
+$ wget http://xdman.sourceforge.net/xdman_mint_ubuntu.deb
+$ sudo dpkg -i xdman_mint_ubuntu.deb
+
+12 – Install Graphic Editor
+
+$ sudo apt-get install gimp inkscape
+
+13 – Install Indicator Synapse
+
+$ sudo apt-add-repository ppa:elementary-os/unstable-upstream
+#ekleme AA
+$ suda apt-get update  
+$ sudo apt-get install indicator-synapse
+
+14 – Install Elementary Tweak
+
+$ sudo apt-add-repository ppa:mpstark/elementary-tweaks-daily 
+$ sudo apt-get install elementary-tweaks
+
+15 – Insall Birdie Twitter Client
+
+$ sudo add-apt-repository ppa:birdie-team/stable
+$ sudo apt-get update
+$ sudo apt-get install birdie
+
+16 – Install Pidgin and Skype
+
+$ sudo apt-get install skype pidgin
+
+17 – Install Steam Gaming Client
+
+$ sudo apt-get install steam
+
+18 – Install Bleachbit System Cleaner
+
+$ sudo apt-get install bleachbit
+
+
+19 – Install Cloud Storage
+
+-- yapmadım Download DropBox : https://www.dropbox.com/install?os=lnx
+
+-- Install Google Drive :
+
+$ sudo add-apt-repository ppa:alessandro-strada/ppa
+$ sudo apt-get update
+$ sudo apt-get install google-drive-ocamlfuse
+
+$ google-drive-ocamlfuse
+
+-- kullanıcı ve sifre giriyorsunuz
+
+$ mkdir ~/googledrive
+$ google-drive-ocamlfuse ~/googledrive/
+
+20 – For Laptop : Install TLP for Improve Battery Life and Reduce Overheating
+
+$ sudo add-apt-repository ppa:linrunner/tlp
+$ sudo apt-get update
+$ sudo apt-get install tlp tlp-rdw
+$ sudo tlp start
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.youtube.com/watch?v=HhwBkwBjhT4
+-----------------------------------------------------------------------------
+-- compiz install for elementary os freya
+
+$ sudo apt-get update
+$ sudo apt-get install synaptic
+
+--Synaptic Package Manager programından compiz aratıp aşağıdaki 3 madde seçılecek.
+compiz , compiz-plugins-extras , compizconfig-settings-manager  
+
+--CompizConfig Settings Manager programında  (Command = /usr/bin/gtk-window-decorator) 
+--Effects >> Window Decoration >> Command = emerald --replace
+
+
+$ sudo add-apt-repository ppa:nilarimogard/webupd8
+$ sudo apt-get update
+$ sudo apt-get install emerald
+
+
+$ compiz --replace
+
+
+bir sorun oldu. ama şimdi çalısıyor...
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.virtualbox.org/wiki/Linux_Downloads
+http://www.ubuntugeek.com/virtualbox-5-0-released-and-ubuntu-installation-instructions-included.html
+-----------------------------------------------------------------------------
+-- Install VirtualBox 5.0 on ubuntu 14.04
+
+Open the terminal and run the following commands
+
+You need to edit /etc/apt/sources.list
+
+$ sudo nano /etc/apt/sources.list
+
+For ubuntu 14.04 users add the following line
+
+    deb http://download.virtualbox.org/virtualbox/debian trusty contrib
+
+Save and exit the file
+
+Now install PGP key using the following command
+$ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add --
+
+Update source list
+
+$ sudo apt-get update
+
+Install virtualbox
+
+$ sudo apt-get install virtualbox-5.0
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.vagrantup.com/
+http://www.olindata.com/blog/2014/07/installing-vagrant-and-virtual-box-ubuntu-1404-lts
+-----------------------------------------------------------------------------
+-- Installing Vagrant and Virtual box on Ubuntu 14.04 LTS 
+
+$ sudo apt-get install vagrant
+
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.playonlinux.com/en/download.html
+http://sysads.co.uk/2014/04/install-playonlinux-ubuntu-14-04-trusty-tahr/
+-----------------------------------------------------------------------------
+-- Install PlayOnLinux
+
+Step 1: Install Latest version of Wine
+
+$ sudo add-apt-repository ppa:ubuntu-wine/ppa
+$ sudo apt-get update
+$ sudo apt-get install wine1.9 winetricks
+
+Step 2: Install PlayOnLinux on Ubuntu 14.04
+
+$ wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+$ sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
+$ sudo apt-get update
+$ sudo apt-get install playonlinux
+
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://git-scm.com/download/linux
+http://linuxg.net/install-git-on-ubuntu/
+-----------------------------------------------------------------------------
+-- Install Git 2.8 Has Been Released
+
+$ sudo add-apt-repository ppa:git-core/ppa
+$ sudo apt-get update
+$ sudo apt-get install git
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://github.com/robbyrussell/oh-my-zsh
+https://richardtape.com/2014/08/03/installing-oh-my-zsh-on-ubuntu/
+-----------------------------------------------------------------------------
+-- Installing ZSH and Install Oh My ZSH on Ubuntu  
+
+
+1. Install ZSH 
+$ sudo apt-get install zsh
+
+2.(If you haven’t installed git, install git…) 
+$ sudo apt-get install git-core
+
+3. Install Oh My ZSH
+# If you have curl: 
+$ curl -L http://install.ohmyz.sh | sh
+
+4. running
+$ zsh
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+http://danielkummer.github.io/git-flow-cheatsheet/index.tr_TR.html
+-----------------------------------------------------------------------------
+-- Install git-flow cheatsheet 
+
+$ sudo apt-get install git-flow 
+
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.gitkraken.com/
+-----------------------------------------------------------------------------
+-- Install gitkraken
+
+$ wget -c https://release.gitkraken.com/linux/gitkraken-amd64.deb -P ~/Downloads/ 
+$ sudo dpkg -i ~/Downloads/gitkraken-amd64.deb 
+
+
+--------------------------------------
+Gökhan bey
+--------------------------------------
+$ sudo apt-get install vim
+$ git clone https://github.com/zetaops/ulakbus.git
+$ git clone https://github.com/zetaops/ulakbus-ui.git
+$ git clone https://github.com/zetaops/ulakbus-development-box.git
+$ git clone https://github.com/zetaops/zengine.git
+$ git clone https://github.com/zetaops/pyoko.git
+
+$ wget https://raw.githubusercontent.com/zetaops/ulakbus.org/master/source/Vagrantfile.sample
+$ mv Vagrantfile.sample Vagrantfile
+
+Vagrantfile dosyası güncelleme
+  ...
+  config.vm.network "forwarded_port", guest: 9001, host: 9001 # ulakbus backend
+  config.vm.network "forwarded_port", guest: 8183, host: 8183 # zato web admin
+  config.vm.network "forwarded_port", guest: 8098, host: 8098 # riak http
+  config.vm.network "forwarded_port", guest: 8087, host: 8087 # riak protocol buffers
+  config.vm.network "forwarded_port", guest: 6379, host: 6379 # redis-server
+  config.vm.network "forwarded_port", guest: 8093, host: 8093 # solr web ui
+  ...
+  config.vm.synced_folder "/home/aksit/development/zetaops/ulakbus", "/app/ulakbus", owner: "ulakbus", group: "ulakbus"
+  config.vm.synced_folder "/home/aksit/development/zetaops/zengine", "/app/zengine", owner: "ulakbus", group: "ulakbus"
+  config.vm.synced_folder "/home/aksit/development/zetaops/pyoko", "/app/pyoko", owner: "ulakbus", group: "ulakbus"
+  config.vm.synced_folder "/home/aksit/development/zetaops/ulakbus-ui", "/app/ulakbus-ui", owner: "ulakbus", group: "ulakbus"
+  ...
+
+--------------------------------------
+$ sudo apt-get remove vagrant
+$ wget -c https://releases.hashicorp.com/vagrant/1.8.1/vagrant_1.8.1_x86_64.deb -P ~/Downloads/
+$ sudo dpkg -i ~/Downloads/vagrant_1.8.1_x86_64.deb
+
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.jetbrains.com/pycharm/
+http://ubuntuhandbook.org/index.php/2015/07/install-pycharm-ubuntu-1404/
+-----------------------------------------------------------------------------
+-- How to Install PyCharm IDE in Ubuntu 14.04/15.04
+
+$ sudo add-apt-repository ppa:mystic-mirage/pycharm
+$ sudo apt-get update
+$ sudo apt-get install pycharm
+
+
+-----------------------------------------------------------------------------
+*****************************************************************************
+https://www.github.com/ahmetaksit
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+-----------------------------------------------------------------------------
+-- Generating a new SSH key and adding it to the ssh-agent
+
+sudo apt-get install xclip
+
+
+
+
+
